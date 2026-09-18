@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn to make 50+ party cocktails with just 10 simple ingredients. Get the digital collection for a one-time payment of $37.">
+  <title>50+ Party Cocktails with 10 Ingredients | $37</title>
+  <style>
+    :root {
+      --ink: #17131a;
+      --muted: #6f6870;
+      --wine: #7c1834;
+      --wine-dark: #551127;
+      --coral: #f26e55;
+      --cream: #fffaf2;
+      --gold: #f4c65d;
+      --line: #eadfd4;
+      --white: #ffffff;
+      --shadow: 0 24px 60px rgba(66, 23, 34, .14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1060px, calc(100% - 40px)); margin: 0 auto; }
+
+    .topbar {
+      background: var(--wine-dark);
+      color: #fff7ef;
+      text-align: center;
+      padding: 11px 16px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 68px 0 78px;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(244, 198, 93, .30), transparent 28%),
+        radial-gradient(circle at 96% 92%, rgba(242, 110, 85, .18), transparent 30%),
+        var(--cream);
+    }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(124, 24, 52, .10);
+      border-radius: 999px;
+      pointer-events: none;
+    }
+    .hero::before { width: 360px; height: 360px; right: -160px; top: -170px; }
+    .hero::after { width: 210px; height: 210px; left: -130px; bottom: -120px; }
+
+    .hero-inner { position: relative; z-index: 1; text-align: center; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--wine);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before, .eyebrow::after {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--coral);
+    }
+    h1 {
+      max-width: 900px;
+      margin: 16px auto 18px;
+      color: var(--wine-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      text-wrap: balance;
+    }
+    .subhead {
+      max-width: 630px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(17px, 2.2vw, 21px);
+    }
+
+    .price-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 26px 0 18px;
+      padding: 9px 17px;
+      border: 1px solid rgba(124, 24, 52, .15);
+      border-radius: 99px;
+      background: rgba(255, 255, 255, .68);
+      color: var(--wine-dark);
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: 0 6px 18px rgba(80, 20, 32, .06);
+    }
+    .price-chip strong { color: var(--coral); font-size: 20px; }
+
+    .product-shot {
+      width: min(720px, 100%);
+      margin: 24px auto 28px;
+      padding: 13px;
+      border: 1px solid rgba(124, 24, 52, .10);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, .8);
+      box-shadow: var(--shadow);
+    }
+    .product-shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+    .caption {
+      margin: 12px 0 0;
+      color: #8b7776;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-width: min(100%, 340px);
+      padding: 18px 27px;
+      border: 0;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--coral), #d64b48);
+      color: #fff;
+      box-shadow: 0 14px 24px rgba(214, 75, 72, .25), inset 0 1px 0 rgba(255,255,255,.25);
+      font-size: 17px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 17px 29px rgba(214, 75, 72, .32), inset 0 1px 0 rgba(255,255,255,.25); }
+    .cta:focus-visible { outline: 4px solid rgba(244, 198, 93, .8); outline-offset: 4px; }
+    .cta-arrow { font-size: 22px; line-height: 0; }
+    .microcopy { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+
+    .proof-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 760px;
+      margin: 38px auto 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .proof { padding: 17px 12px; text-align: center; }
+    .proof + .proof { border-left: 1px solid var(--line); }
+    .proof strong { display: block; color: var(--wine); font-size: 22px; font-family: Georgia, "Times New Roman", serif; }
+    .proof span { display: block; color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+
+    .section { padding: 78px 0; }
+    .section.alt { background: #fff; }
+    .section-title { max-width: 720px; margin: 0 auto 35px; text-align: center; }
+    .section-title h2 {
+      margin: 11px 0 10px;
+      color: var(--wine-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(33px, 4vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -.04em;
+    }
+    .section-title p { margin: 0; color: var(--muted); font-size: 17px; }
+
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .card {
+      padding: 27px 24px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--cream);
+    }
+    .card .number { color: var(--coral); font-size: 27px; font-weight: 950; line-height: 1; }
+    .card h3 { margin: 14px 0 7px; color: var(--wine-dark); font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .offer {
+      background: var(--wine-dark);
+      color: #fff9f2;
+      text-align: center;
+    }
+    .offer .section-title h2 { color: #fff9f2; }
+    .offer .section-title p { color: #e8cfd0; }
+    .offer-box {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 32px 25px 30px;
+      border: 1px solid rgba(255, 255, 255, .17);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .06);
+    }
+    .included { display: grid; grid-template-columns: repeat(2, 1fr); gap: 11px 24px; max-width: 480px; margin: 0 auto 26px; text-align: left; }
+    .included div { color: #fff5ec; font-size: 15px; }
+    .included div::before { content: "✓"; display: inline-grid; place-items: center; width: 21px; height: 21px; margin-right: 8px; border-radius: 50%; background: var(--gold); color: var(--wine-dark); font-size: 13px; font-weight: 950; }
+    .offer .cta { background: var(--gold); color: var(--wine-dark); box-shadow: 0 14px 24px rgba(0,0,0,.20); }
+    .offer .cta:hover { box-shadow: 0 17px 29px rgba(0,0,0,.30); }
+    .guarantee { margin: 16px 0 0; color: #f2dfe0; font-size: 13px; }
+
+    .legal { padding: 46px 0 54px; background: #f6eee6; }
+    .legal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    details { border-top: 1px solid #dfcfc5; padding-top: 14px; }
+    summary { cursor: pointer; color: var(--wine-dark); font-weight: 850; }
+    details p { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+    details a { color: var(--wine); font-weight: 700; }
+
+    footer { padding: 25px 0 95px; background: var(--wine-dark); color: #e8cfd0; font-size: 12px; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .footer-brand { color: #fff9f2; font-weight: 900; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .footer-links a { color: #f1d9d6; text-underline-offset: 3px; }
+    .disclosure { margin: 18px 0 0; max-width: 760px; color: #bd9da0; font-size: 11px; }
+
+    .mobile-cta { display: none; }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 28px, 540px); }
+      .topbar { font-size: 10px; letter-spacing: .09em; }
+      .hero { padding: 47px 0 54px; }
+      h1 { font-size: clamp(40px, 13vw, 62px); }
+      .subhead { font-size: 16px; }
+      .product-shot { margin-top: 22px; padding: 8px; border-radius: 17px; }
+      .product-shot img { border-radius: 11px; }
+      .proof-row { margin-top: 33px; }
+      .proof { padding: 14px 6px; }
+      .proof strong { font-size: 18px; }
+      .proof span { font-size: 9px; letter-spacing: .02em; }
+      .section { padding: 57px 0; }
+      .cards, .legal-grid { grid-template-columns: 1fr; }
+      .cards { gap: 11px; }
+      .card { padding: 20px; }
+      .included { grid-template-columns: 1fr; gap: 10px; }
+      .offer-box { padding: 25px 17px; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+      .mobile-cta { display: block; position: fixed; z-index: 10; right: 0; bottom: 0; left: 0; padding: 10px 14px; background: rgba(85, 17, 39, .96); box-shadow: 0 -8px 24px rgba(0,0,0,.12); text-align: center; }
+      .mobile-cta .cta { width: 100%; min-width: 0; padding: 14px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Digital collection · Instant access · One-time payment</div>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="eyebrow">The easy home-bar playbook</div>
+        <h1>Learn to Make 50+ Party Cocktails with Just 10 Simple Ingredients</h1>
+        <p class="subhead">A beginner-friendly digital collection to help you mix, serve and celebrate with confidence — without an overwhelming shopping list.</p>
+        <div class="price-chip"><span>Get the complete collection for</span> <strong>$37</strong></div>
+
+        <figure class="product-shot">
+          <img src="assets/hero-collection.webp" alt="The 10-Ingredient Party Bar digital collection with cocktail recipe books and AI Party Bartender access">
+          <figcaption class="caption">Main e-book + 2 bonus recipe books + AI Party Bartender</figcaption>
+        </figure>
+
+        <a class="cta" href="https://10ingredientpartybar.com/get-now/#aff=thiagobarber" target="_blank" rel="nofollow sponsored noopener">Get Instant Access — $37 <span class="cta-arrow">→</span></a>
+        <p class="microcopy">Secure checkout · Digital delivery · No physical product shipped</p>
+
+        <div class="proof-row" aria-label="What is included">
+          <div class="proof"><strong>50+</strong><span>Easy cocktails</span></div>
+          <div class="proof"><strong>10</strong><span>Core ingredients</span></div>
+          <div class="proof"><strong>60 days</strong><span>Money-back guarantee</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="eyebrow">Simple by design</div>
+          <h2>Make hosting feel easier.</h2>
+          <p>Stop searching for complicated recipes at the last minute. Use one focused collection built for real home celebrations.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="number">01</div>
+            <h3>Shop with a plan</h3>
+            <p>Build your bar around 10 core ingredients instead of buying a different bottle for every recipe.</p>
+          </article>
+          <article class="card">
+            <div class="number">02</div>
+            <h3>Choose by occasion</h3>
+            <p>Find approachable drinks for brunch, date night, holidays, pool parties and more.</p>
+          </article>
+          <article class="card">
+            <div class="number">03</div>
+            <h3>Serve with confidence</h3>
+            <p>Get clear recipes, mocktail ideas, pitcher options and AI help whenever you need it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section offer" id="get-access">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="eyebrow" style="color:#f4c65d">Everything in one offer</div>
+          <h2>Ready to make your next party the easy one?</h2>
+          <p>Get the complete digital collection today for one simple payment of $37.</p>
+        </div>
+        <div class="offer-box">
+          <div class="included">
+            <div>50-cocktail main e-book</div>
+            <div>10-mocktail bonus e-book</div>
+            <div>5-pitcher bonus e-book</div>
+            <div>24/7 AI Party Bartender</div>
+          </div>
+          <a class="cta" href="https://10ingredientpartybar.com/get-now/#aff=thiagobarber" target="_blank" rel="nofollow sponsored noopener">Yes — Give Me the Collection <span class="cta-arrow">→</span></a>
+          <p class="guarantee">Try it for 60 days. Refund requests are subject to applicable law and the terms shown at checkout.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal" id="policies">
+      <div class="wrap legal-grid">
+        <details id="information" open>
+          <summary>Product information</summary>
+          <p>This is a digital product. After purchase, you receive access to PDF recipe books and the included AI Party Bartender. No physical book or product will be shipped. The checkout page contains the final purchase details.</p>
+        </details>
+        <details id="privacy">
+          <summary>Privacy policy</summary>
+          <p>This presell page does not ask for or store personal information. When you click the button, you are sent to the merchant's checkout. Any payment, order, delivery and customer-support data is handled according to the merchant and checkout provider's privacy policy. Please review those policies before purchasing.</p>
+        </details>
+        <details id="terms">
+          <summary>Terms, refunds & disclosure</summary>
+          <p>Offer price, access and refund terms are presented by the merchant at checkout. The advertised guarantee is 60 days, subject to applicable law and the checkout terms. This page may contain a sponsored affiliate link; if you purchase through it, the page owner may receive a commission at no extra cost to you.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-row">
+        <div class="footer-brand">The 10-Ingredient Party Bar</div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#information">Information</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#terms">Terms & refunds</a>
+          <a href="mailto:10ingredientpartybar@gmail.com">Contact</a>
+        </nav>
+      </div>
+      <p class="disclosure">Independent presell page. Product names, offer details, checkout, delivery and customer support are provided by the merchant. Please confirm the current terms and price on the checkout page before completing your purchase.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="cta" href="https://10ingredientpartybar.com/get-now/#aff=thiagobarber" target="_blank" rel="nofollow sponsored noopener">Get Access — $37 <span class="cta-arrow">→</span></a>
+  </div>
+</body>
+</html>
